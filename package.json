@@ -1,0 +1,40 @@
+{
+  "name": "react-native-lego-blocks",
+  "private": true,
+  "description": "## React Native - Lego Blocks",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SelcouthDigital/react-native-lego-blocks.git"
+  },
+  "author": "Selcouth Digital",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SelcouthDigital/react-native-lego-blocks/issues"
+  },
+  "homepage": "https://github.com/SelcouthDigital/react-native-lego-blocks#readme",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "storybook": "storybook start -p 7007",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@storybook/react-native": "^3.4.12",
+    "expo": "^32.0.0",
+    "react": "16.5.0",
+    "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-transition-group": "^2.9.0",
+    "velocity-react": "^1.4.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-knobs": "^5.0.6",
+    "@storybook/addon-notes": "^5.0.6",
+    "@storybook/addons": "^5.0.6",
+    "babel-preset-expo": "^5.0.0"
+  }
+}
