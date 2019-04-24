@@ -16,14 +16,30 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
+    "prestorybook": "rnstl",
     "storybook": "storybook start -p 7007",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject"
   },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": ["./src", "./packages"],
+      "pattern": "**/*.stories.js",
+      "outputFile": "./src/storybook/storyLoader.js"
+    }
+  },
   "dependencies": {
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-knobs": "^5.0.6",
+    "@storybook/addon-notes": "^5.0.6",
+    "@storybook/addon-ondevice-knobs": "^4.1.18",
+    "@storybook/addon-ondevice-notes": "^4.1.18",
+    "@storybook/addons": "^5.0.6",
+    "@storybook/react": "^5.0.9",
     "@storybook/react-native": "^3.4.12",
     "expo": "^32.0.0",
+    "prop-types": "^15.7.2",
     "react": "16.5.0",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
@@ -31,10 +47,13 @@
     "velocity-react": "^1.4.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.0.6",
-    "@storybook/addon-knobs": "^5.0.6",
-    "@storybook/addon-notes": "^5.0.6",
-    "@storybook/addons": "^5.0.6",
-    "babel-preset-expo": "^5.0.0"
+    "babel-preset-expo": "^5.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.11.0",
+    "eslint-plugin-react-native": "^3.6.0",
+    "react-native-storybook-loader": "^1.8.0"
   }
 }
