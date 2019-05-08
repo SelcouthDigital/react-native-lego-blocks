@@ -6,11 +6,13 @@
 
 function loadStories() {
   require('./stories/Button.stories');
+  require('./stories/ImageActionSheet.stories');
   
 }
 
 const stories = [
   './stories/Button.stories',
+  './stories/ImageActionSheet.stories',
   
 ];
 
