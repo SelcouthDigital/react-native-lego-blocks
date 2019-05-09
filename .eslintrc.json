@@ -1,32 +1,36 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "react-native/react-native": true
-    },
-    "extends": "airbnb",
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
+    "parser": "babel-eslint",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
+      "ecmaVersion": 7,
+      "allowImportExportEverywhere": false,
+      "ecmaFeatures": {
+        "jsx": true
+      }
     },
-    "plugins": [
-        "react",
-        "react-native"
-    ],
+    "plugins": ["prettier"],
     "rules": {
-        "comma-dangle": 0,
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react-native/no-unused-styles": 2,
-        "react-native/split-platform-components": 2,
-        "react-native/no-inline-styles": 2,
-        "react-native/no-color-literals": 2,
-        "semi": 0
-    }
-}
+      "import/prefer-default-export": [0],
+      "class-methods-use-this": [0],
+      "no-use-before-define": [2, { "variables": false }],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "prefer-promise-reject-errors": [0],
+      "radix": [0],
+      "react/require-default-props": [0],
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "singleQuote": true,
+          "trailingComma": "none"
+        }
+      ],
+      "lines-between-class-members": [
+        "error",
+        "always",
+        { "exceptAfterSingleLine": true }
+      ],
+      "react/jsx-wrap-multilines": false
+    },
+    "extends": ["airbnb", "prettier"]
+  }
+  

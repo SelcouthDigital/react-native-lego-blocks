@@ -1,31 +1,36 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { State, Store } from '@sambego/storybook-state'
 
 import { CenteredView } from './Views'
 import Button from '../../../packages/Button'
 import ImageActionSheet from '../../../packages/ImageActionSheet'
 
-const store = new Store({
-  visible: false
-})
+class ImageActionSheetWrapper extends PureComponent {
+  state = {
+    visible: false
+  }
 
-storiesOf('ImageActionSheet', module)
-  .add('Basic', () => (
-    <CenteredView>
-      <Button
-        onPress={() => {
-          store.set({ visible: true })
-        }}
-        type="primary"
-      >
+  render() {
+    const { visible } = this.state
+    return (
+      <CenteredView>
+        <Button
+          onPress={() => {
+            this.setState({ visible: true })
+          }}
+          type="primary"
+        >
           Click me
-      </Button>
-      <State store={store}>
+        </Button>
         <ImageActionSheet
-          onDismiss={() => store.set({ visible: false })}
-          visible={store.visible}
+          onDismiss={() => this.setState({ visible: false })}
+          visible={visible}
         />
-      </State>
-    </CenteredView>
-  ))
+      </CenteredView>
+    )
+  }
+}
+
+storiesOf('ImageActionSheet', module).add('Basic', () => (
+  <ImageActionSheetWrapper />
+))
