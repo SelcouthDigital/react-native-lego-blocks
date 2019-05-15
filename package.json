@@ -1,6 +1,6 @@
 {
-  "name": "react-native-lego-blocks",
-  "private": true,
+  "name": "@selcouth-digital/react-native-lego-blocks",
+  "private": false,
   "description": "## React Native - Lego Blocks",
   "version": "0.1.0",
   "repository": {
@@ -50,17 +50,17 @@
     "velocity-react": "^1.4.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-preset-expo": "^5.0.0",
     "eslint": "^4.19.1",
-    "babel-eslint": "^10.0.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.4.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "7.12.3",
+    "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-native": "^3.6.0",
-    "react-native-storybook-loader": "^1.8.0",
-    "prettier": "1.15.3"
+    "prettier": "1.15.3",
+    "react-native-storybook-loader": "^1.8.0"
   }
 }

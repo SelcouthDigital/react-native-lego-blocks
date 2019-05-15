@@ -12,6 +12,7 @@ class ImageActionSheetWrapper extends PureComponent {
 
   render() {
     const { visible } = this.state
+
     return (
       <CenteredView>
         <Button

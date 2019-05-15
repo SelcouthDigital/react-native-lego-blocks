@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import { Alert } from 'react-native'
 import PropTypes from 'prop-types'
 import { ImagePicker, Permissions } from 'expo'
@@ -15,7 +15,7 @@ export default class ImageActionSheet extends PureComponent {
     visible: false
   }
 
-  handlePhotoTake = async e => {
+  handlePhotoTake = async () => {
     const { onDismiss } = this.props
     try {
       const { status } = await Permissions.askAsync(Permissions.CAMERA)
@@ -36,13 +36,14 @@ export default class ImageActionSheet extends PureComponent {
       const photo = await ImagePicker.launchCameraAsync()
       console.log(photo)
 
-      onDismiss()
+      return onDismiss()
     } catch (e) {
       console.warn(e)
+      return e
     }
   }
 
-  handleSelectFromLibrary = async e => {
+  handleSelectFromLibrary = async () => {
     const { onDismiss } = this.props
     try {
       const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL)
@@ -67,9 +68,10 @@ export default class ImageActionSheet extends PureComponent {
       const image = await ImagePicker.launchImageLibraryAsync(options)
       console.log(image)
 
-      onDismiss()
+      return onDismiss()
     } catch (e) {
       console.warn(e)
+      return e
     }
   }
 
@@ -79,21 +81,19 @@ export default class ImageActionSheet extends PureComponent {
       {
         text: 'Take a photo',
         onPress: this.handlePhotoTake
-      }, {
+      },
+      {
         text: 'Select from library',
         onPress: this.handleSelectFromLibrary
-      }, {
+      },
+      {
         text: 'Cancel',
         onPress: onDismiss,
         style: 'cancel'
       }
     ]
     if (visible) {
-      Alert.alert(
-        title,
-        null,
-        options
-      )
+      Alert.alert(title, null, options)
     }
     return null
   }

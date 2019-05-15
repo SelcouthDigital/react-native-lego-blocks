@@ -1,36 +1,31 @@
 {
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 7,
-      "allowImportExportEverywhere": false,
-      "ecmaFeatures": {
-        "jsx": true
+  "parser": "babel-eslint",
+  "plugins": ["prettier"],
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "import/prefer-default-export": [0],
+    "class-methods-use-this": [0],
+    "no-use-before-define": [2, { "variables": false }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "prefer-promise-reject-errors": [0],
+    "radix": [0],
+    "react/require-default-props": [0],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "none"
       }
-    },
-    "plugins": ["prettier"],
-    "rules": {
-      "import/prefer-default-export": [0],
-      "class-methods-use-this": [0],
-      "no-use-before-define": [2, { "variables": false }],
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      "prefer-promise-reject-errors": [0],
-      "radix": [0],
-      "react/require-default-props": [0],
-      "prettier/prettier": [
-        "error",
-        {
-          "semi": false,
-          "singleQuote": true,
-          "trailingComma": "none"
-        }
-      ],
-      "lines-between-class-members": [
-        "error",
-        "always",
-        { "exceptAfterSingleLine": true }
-      ],
-      "react/jsx-wrap-multilines": false
-    },
-    "extends": ["airbnb", "prettier"]
+    ],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { "exceptAfterSingleLine": true }
+    ],
+    "react/jsx-wrap-multilines": false
+  },
+  "env": {
+    "jest": true
   }
-  
+}
