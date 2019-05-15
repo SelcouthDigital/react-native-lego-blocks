@@ -2,7 +2,7 @@
   "name": "@selcouth-digital/react-native-lego-blocks",
   "private": false,
   "description": "## React Native - Lego Blocks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SelcouthDigital/react-native-lego-blocks.git"
