@@ -32,6 +32,15 @@
       "outputFile": "./src/storybook/storyLoader.js"
     }
   },
+  "peerDependencies": {
+    "expo": "^32.0.0",
+    "prop-types": "^15.7.2",
+    "react": "16.5.0",
+    "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-transition-group": "^2.9.0",
+    "velocity-react": "^1.4.1"
+  },
   "dependencies": {
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-knobs": "^5.0.6",
@@ -40,14 +49,7 @@
     "@storybook/addon-ondevice-notes": "^4.1.18",
     "@storybook/addons": "^5.0.6",
     "@storybook/react": "^5.0.9",
-    "@storybook/react-native": "^3.4.12",
-    "expo": "^32.0.0",
-    "prop-types": "^15.7.2",
-    "react": "16.5.0",
-    "react-dom": "^16.8.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-transition-group": "^2.9.0",
-    "velocity-react": "^1.4.1"
+    "@storybook/react-native": "^3.4.12"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
