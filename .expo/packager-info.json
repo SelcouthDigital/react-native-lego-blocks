@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 29714,
-  "expoServerNgrokUrl": "https://a6-eyf.anonymous.react-native-lego-blocks.exp.direct",
-  "packagerNgrokUrl": "https://packager.a6-eyf.anonymous.react-native-lego-blocks.exp.direct",
-  "ngrokPid": 29785,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
