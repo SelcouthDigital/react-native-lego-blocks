@@ -6,6 +6,7 @@ import { ImagePicker, Permissions } from 'expo'
 export default class ImageActionSheet extends PureComponent {
   static propTypes = {
     onDismiss: PropTypes.func.isRequired,
+    onSelect: PropTypes.func.isRequired,
     title: PropTypes.string,
     visible: PropTypes.bool
   }
@@ -16,7 +17,7 @@ export default class ImageActionSheet extends PureComponent {
   }
 
   handlePhotoTake = async () => {
-    const { onDismiss } = this.props
+    const { onDismiss, onSelect } = this.props
     try {
       const { status } = await Permissions.askAsync(Permissions.CAMERA)
 
@@ -34,7 +35,7 @@ export default class ImageActionSheet extends PureComponent {
       }
 
       const photo = await ImagePicker.launchCameraAsync()
-      console.log(photo)
+      onSelect(photo)
 
       return onDismiss()
     } catch (e) {
@@ -44,7 +45,7 @@ export default class ImageActionSheet extends PureComponent {
   }
 
   handleSelectFromLibrary = async () => {
-    const { onDismiss } = this.props
+    const { onDismiss, onSelect } = this.props
     try {
       const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL)
 
@@ -66,7 +67,7 @@ export default class ImageActionSheet extends PureComponent {
         mediaTypes: 'Images'
       }
       const image = await ImagePicker.launchImageLibraryAsync(options)
-      console.log(image)
+      onSelect(image)
 
       return onDismiss()
     } catch (e) {

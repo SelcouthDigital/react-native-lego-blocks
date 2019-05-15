@@ -25,6 +25,7 @@ class ImageActionSheetWrapper extends PureComponent {
         </Button>
         <ImageActionSheet
           onDismiss={() => this.setState({ visible: false })}
+          onSelect={image => console.log(image)}
           visible={visible}
         />
       </CenteredView>
