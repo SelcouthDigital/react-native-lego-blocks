@@ -2,7 +2,7 @@
   "name": "@selcouth-digital/react-native-lego-blocks",
   "private": false,
   "description": "## React Native - Lego Blocks",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SelcouthDigital/react-native-lego-blocks.git"
@@ -13,7 +13,7 @@
     "url": "https://github.com/SelcouthDigital/react-native-lego-blocks/issues"
   },
   "homepage": "https://github.com/SelcouthDigital/react-native-lego-blocks#readme",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "packages/index.js",
   "scripts": {
     "start": "expo start",
     "prestorybook": "rnstl",
